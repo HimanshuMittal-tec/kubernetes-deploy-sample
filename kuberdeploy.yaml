@@ -1,8 +1,8 @@
 ---
-apiVersion: V1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata: 
- name:nginx-deployment
+ name: nginx-deployment
 spec:
  replicas: 2
  template:
@@ -11,7 +11,7 @@ spec:
     app: nginx
   spec:
     containers:
-     - name: nginx
+    - name: nginx
       image: nginx:latest
       ports:
       - containerPort: 80
